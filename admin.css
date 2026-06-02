@@ -1,0 +1,233 @@
+/* ---------- Body & Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #0a1a3a, #0b3c8c);
+    color: #ffffff;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* ---------- Headings ---------- */
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 20px 0 5px 0;
+    color: #ffffff;
+    text-shadow: 1px 2px 6px rgba(0,0,0,0.5);
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 15px 0;
+    color: #e0e0ff;
+}
+
+/* ---------- Paragraph ---------- */
+p {
+    color: #c2c2ff;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* ---------- Dashboard Container ---------- */
+.dashboard-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+/* ---------- Boxes ---------- */
+.dashboard-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 25px 20px;
+    width: 300px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+/* ---------- Inputs & Selects ---------- */
+.dashboard-box input, 
+.dashboard-box select {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+    outline: none;
+    background: rgba(255,255,255,0.2);
+    color: #000; /* Fixed dropdown text color for visibility */
+    transition: background 0.3s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.dashboard-box option {
+    color: #000; /* Ensure all options visible */
+}
+
+.dashboard-box input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.dashboard-box input:focus,
+.dashboard-box select:focus {
+    background: rgba(255,255,255,0.35);
+}
+
+/* ---------- Buttons ---------- */
+.primary-btn {
+    width: 90%;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #1e88ff, #6ab7ff);
+    color: white;
+    font-weight: 500;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    background: linear-gradient(135deg, #1565c0, #4dabf5);
+}
+
+/* ---------- Camera Box ---------- */
+#reader {
+    width: 260px;
+    height: 300px;
+    margin-bottom: 15px;
+    border: 2px dashed rgba(255,255,255,0.5);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.05);
+    position: relative;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+#reader:hover {
+    border-color: #6ab7ff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+#cameraText {
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+}
+
+/* ---------- Upload Box ---------- */
+.upload-box {
+    width: 260px;
+    height: 220px;
+    border: 2px dashed rgba(255,255,255,0.5);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 15px;
+    background-color: rgba(255,255,255,0.05);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.upload-box:hover {
+    border-color: #6ab7ff;
+    background-color: rgba(255,255,255,0.1);
+}
+
+#previewImage {
+    max-width: 90%;
+    max-height: 180px;
+    border-radius: 10px;
+    margin-top: 5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+#previewImage:hover {
+    transform: scale(1.03);
+}
+
+/* ---------- Table ---------- */
+table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+thead th {
+    background: rgba(30,136,255,0.8);
+    color: white;
+    padding: 12px;
+    font-weight: 500;
+}
+
+tbody td {
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+tbody tr:hover {
+    background: rgba(30,136,255,0.2);
+    cursor: pointer;
+}
+
+/* ---------- Delete Button in Table ---------- */
+tbody button {
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #f44336, #ff7961);
+    color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+tbody button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* ---------- Responsive ---------- */
+@media(max-width: 1024px) {
+    .dashboard-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .dashboard-box {
+        width: 90%;
+    }
+}

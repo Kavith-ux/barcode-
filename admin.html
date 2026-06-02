@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="icon" href="image.jpeg">
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+<body>
+
+<h1>Admin Dashboard</h1>
+<p>Add / Manage Automobile Spare Parts</p>
+
+<div class="dashboard-container">
+
+    <!-- Left: Upload QR -->
+    <div class="dashboard-box">
+        <h2>Upload Barcode</h2>
+        <div class="upload-box" id="uploadBox">
+            <span>Click or Drag & Drop to Upload</span>
+            <input type="file" id="uploadInput" accept="image/*" style="display:none;">
+            <img id="previewImage" src="" alt="">
+        </div>
+        <select id="uploadStatus">
+            <option value="genuine" selected>Genuine</option>
+            <option value="defective">Defective</option>
+        </select>
+        <button class="primary-btn" id="uploadAddBtn">Scan & Add Part</button>
+    </div>
+
+    <!-- Middle: Camera Scan -->
+    <div class="dashboard-box">
+        <h2>Scan with Camera</h2>
+        <div id="reader" style="width:260px; height:300px; border:2px dashed rgba(255,255,255,0.4); border-radius:10px;"></div>
+        <select id="cameraStatus">
+            <option value="genuine" selected>Genuine</option>
+            <option value="defective">Defective</option>
+        </select>
+        <button class="primary-btn" id="cameraStartBtn">Start Camera</button>
+    </div>
+
+    <!-- Right: Manual Entry -->
+    <div class="dashboard-box">
+        <h2>Manual Entry</h2>
+        <input type="text" id="manualBarcode" placeholder="Enter barcode here">
+        <input type="text" id="manualName" placeholder="Part Name">
+        <input type="text" id="manualBrand" placeholder="Manufacturer">
+        <select id="manualStatus">
+            <option value="genuine" selected>Genuine</option>
+            <option value="defective">Defective</option>
+        </select>
+        <button class="primary-btn" id="manualAddBtn">Add Part</button>
+    </div>
+
+</div>
+
+<h2>All Parts</h2>
+<table border="1" width="90%" align="center">
+    <thead>
+        <tr>
+            <th>Barcode</th>
+            <th>Part Name</th>
+            <th>Manufacturer</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="partsTable"></tbody>
+</table>
+
+<script src="admin.js"></script>
+<div id="upload-reader" style="display:none;"></div>
+
+</body>
+</html>
